@@ -75,7 +75,7 @@ int main () {
     d_pub.print();
 
     Derived_Pri d_pri;
-    d_pri.property_d = 3.45; //inherited as private member
+    //d_pri.property_d = 3.45; //inherited as private member
     d_pri.print();
 
     return 0;
