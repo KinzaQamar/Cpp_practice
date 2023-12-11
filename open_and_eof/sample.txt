@@ -1,0 +1,10 @@
+Welcome to basic file operations program
+Using open() and eof(), we will do file IO
+Let's write all 26 English language alphabets
+A B C D
+  E F G H
+    I J K L
+      M N O P
+        Q R S T
+          U V W X
+            Y Z
