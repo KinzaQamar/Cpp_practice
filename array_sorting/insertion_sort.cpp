@@ -1,23 +1,21 @@
-//This program is an example of bubble sorting algorithm
+//This program is an example of iinsertions sorting algorithm
 //19-Dec-2023
 
 #include <iostream>
 using namespace std;
 
-void bubble_sort (int arr[], int size) {
-    int temp;
-    int count = 1;
+void insertion_sort (int arr[], int size) {
+    int curr;
+    int j;
 
-    while (count < size) {
-        for (int i = 0; i < size-count; i++)
-        {
-            if (arr[i] > arr[i+1]) {
-                temp = arr[i];
-                arr[i] = arr[i+1];
-                arr[i+1] = temp;
-            }
+    for (int i = 1; i < size; i++) {
+        curr = arr[i];
+        j = i-1;
+        while (arr[j] > curr && j>=0) {
+            arr[j+1] = arr[j];
+            j--;
         }
-        count++;
+        arr[j+1] = curr;
     }
 
     cout<<"The sorted contents of an array are : "<<endl;
@@ -49,7 +47,7 @@ int main() {
     }
     cout<<endl;
 
-    bubble_sort(arr, size);
+    insertion_sort(arr, size);
 
     return 0;
 }
