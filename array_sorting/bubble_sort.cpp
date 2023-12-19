@@ -1,22 +1,23 @@
 //This program is an example of selection sorting algorithm
-//18-Dec-2023
+//19-Dec-2023
 
 #include <iostream>
 using namespace std;
 
-void selection_sort (int arr[], int size) {
+void bubble_sort (int arr[], int size) {
     int temp;
+    int count = 1;
 
-    for (int i = 0; i < size; i++)
-    {
-        for (int j = i+1; j < size; j++)
+    while (count < size) {
+        for (int i = 0; i < size-count; i++)
         {
-            if (arr[j] < arr[i]) {
+            if (arr[i] > arr[i+1]) {
                 temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+                arr[i] = arr[i+1];
+                arr[i+1] = temp;
             }
         }
+        count++;
     }
 
     cout<<"The sorted contents of an array are : "<<endl;
@@ -26,7 +27,7 @@ void selection_sort (int arr[], int size) {
     } 
 }
 
-int main () {
+int main() {
     int size;
     cout<<"Enter the size of array : ";
     cin>>size;
@@ -48,7 +49,7 @@ int main () {
     }
     cout<<endl;
 
-    selection_sort(arr, size);  
+    bubble_sort(arr, size);
 
     return 0;
 }
